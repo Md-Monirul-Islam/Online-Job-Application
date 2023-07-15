@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+      User login
+{% endblock title %}
+
+{% block content %}
+
+<marquee style="font-size:25px; background-color:lightgray;" class="font-monotype-corsiva font-weight-bold mt-1">
+    User Login
+</marquee>
+
+<form class="container mt-5" action="" method="post">
+    {% csrf_token %}
+    <label><b>UserName</b></label>
+    <input type="text" class="form-control" name="uname" placeholder="Enter UserName">
+
+    <label><b>Password</b></label>
+    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+
+    <input type="submit" value="Login" class="btn btn-primary m-3">
+
+    <a href="{% url 'user-sign-up' %}" class="btn btn-primary">Sign Up</a>
+</form>
+
+{% endblock content %}

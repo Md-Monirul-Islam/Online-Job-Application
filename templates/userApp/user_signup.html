@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    User singup page
+{% endblock title %}
+
+{% block content %}
+
+<style>
+    .btn1{
+        width: 200px;
+    }
+</style>
+
+<marquee style="font-size:25px; background-color:lightgray;" class="font-monotype-corsiva font-weight-bold mt-1">
+    User SignUp
+</marquee>
+
+<form class="container mt-5" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="">First Name: </label>
+            <input type="text" class="form-control" name="fname" placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="">Last Name: </label>
+            <input type="text" class="form-control" name="lname" placeholder="Enter your last name">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="">Contact: </label>
+            <input type="text" class="form-control" name="contact" placeholder="Enter your contact number">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="">Email: </label>
+            <input type="text" class="form-control" name="email" placeholder="Enter your email">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="">Password: </label>
+            <input type="text" class="form-control" name="password" placeholder="create password">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="">Confirm password: </label>
+            <input type="text" class="form-control" name="conpassword" placeholder="create your confirm password">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label class="m-2" for="">Gender: </label>
+            <div style="border:1px solid lightgray; padding: 4px; border-radius:6px;">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioLine1" name="gender" class="custom-control-input" value="Male">
+                    <label class="custom-control-label ml-3" for="customRadioLine1">Male</label>
+                </div>
+    
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioLine2" name="gender" class="custom-control-input" value="Female">
+                    <label class="custom-control-label" for="customRadioLine2">Female</label>
+                </div>
+    
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioLine3" name="gender" class="custom-control-input" value="Others">
+                    <label class="custom-control-label" for="customRadioLine3">Others</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label class="mt-1">Image: </label>
+            <input type="file" class="form-control" name="image">
+        </div>
+    </div>
+    <input type="submit" name="" id="" value="Submit" class="btn btn-primary btn1">
+</form>
+
+{% endblock content %}
+

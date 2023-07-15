@@ -1,0 +1,95 @@
+{% load static %}
+
+<style>
+  .f_s {
+    font-size: 26px;
+  }
+
+  .nav-color {
+    background-color: rgba(51, 105, 54, 0.692);
+  }
+
+  .font-monotype-corsiva {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 30px;
+  }
+  .nav1{
+    margin-left: 280px;
+  }
+
+  .nav-link{
+    color: white !important;
+    text-decoration: none;
+    margin-right: 4px;
+    padding: 2px;
+  }
+
+  .nav-link:hover{
+    color: lightgray !important;
+    font-weight: bold;
+    background-color: blueviolet;
+    border-radius: 10px;
+  }
+
+  .navbar-brand:hover{
+    color: lightcoral !important;
+  }
+</style>
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{% static 'images/job.webp' %}" alt="" height="150" width="180" class="mr-10">
+      </div>
+
+      <div class="col-sm-6 mt-5 text-center"> <!-- Update the class to "text-center" for center alignment -->
+        <span class="font-weight-bold f_s">
+          <span class="text-primary">Online Job </span>
+          <span class="text-success">Portal System</span>
+        </span>
+      </div>
+
+      <div class="col-sm-3 ml-auto mt-5 text-right"> <!-- Add this div for the icon -->
+        <span class="align-content-end">
+          <span class="m-2"><i class="fa-brands fa-twitter fa-2x"></i></span>
+          <span class="m-2"><i class="fa-brands fa-linkedin fa-2x"></i></span>
+          <span class="m-2"><i class="fa-brands fa-instagram fa-2x"></i></span>
+          <span class="m-2"><i class="fa-brands fa-telegram fa-2x"></i></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-sm nav-color">
+    <a class="navbar-brand text-white pl-5 font-weight-bold font-monotype-corsiva" href="">Job Portal</a>
+
+    <ul class="navbar-nav d-flex">
+      <li class="nav-item">
+        <a class="nav-link nav1" href="{% url 'home' %}">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Latest Jobs</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'user-login' %}">User Login</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'recruiter-login' %}">Recruiter Login</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'admin-login' %}">Admin Login</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
